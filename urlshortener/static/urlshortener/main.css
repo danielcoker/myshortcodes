@@ -1,0 +1,45 @@
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-size: 2.2rem;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+main p {
+    text-align: center;
+}
+
+.main-section {
+    margin-top: 75px;
+}
+
+.input-url {
+    height: 56px;
+    font-size: 20px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+form input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.result-section {
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 70%;
+    background-color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+}
