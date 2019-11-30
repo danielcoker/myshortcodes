@@ -1,6 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .forms import UrlForm
+from django.contrib import messages
 
 
 def index(request):
-    return render(request, 'urlshortener/home.html')
+    if request.method == 'POST':
+        url_form = UrlForm(data=request.POST)
+
+        if url_form.is_valid():
+            url_object = url_form.save()
+            messages.info(request, url_object.short())
+
+            return redirect(request.path_info)
+    else:
+        url_form = UrlForm()
+        
+    return render(request, 'urlshortener/home.html', {'url_form':url_form})

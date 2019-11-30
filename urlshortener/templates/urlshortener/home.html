@@ -27,21 +27,23 @@
     <main>
         <section class="col-md-8 offset-md-2 main-section">
             <p>Shorten your long URLs with myshort.codes</p>
-            <form action="" method="">
-              <input type="text" name="long_url" placeholder="Enter Long URL" class="form-control input-url">
+            <form method="POST">
+              {% csrf_token %}
+              {% comment %} <input type="text" name="long_url" placeholder="Enter Long URL" class="form-control input-url"> {% endcomment %}
+              {{ url_form.as_p }}
               <input type="submit" class="btn btn-primary" value="Shorten URL">
             </form>
         <section>
 
-        <section class="col-md-8 offset-md-2 result-section">
+        {% if messages %}
+            <section class="col-md-8 offset-md-2 result-section">
             <p>Copy your shortened URL</p>
-            <p class="text-primary"><strong>http://myshort.codes/xH38adf29/</strong></p>
-        </section>
+            {% for message in messages %}
+                <p class="text-primary"><a href="{{ message }}" target="_blank"><strong>{{ message }}</a></strong></p>
+            {% endfor %}
+            </section>
+        {% endif %}
     </main>
-
-    <footer>
-        &copy; Copyright 2019
-    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
