@@ -25,10 +25,7 @@ SECRET_KEY = 'h=v&mlf258-!qvny5ylty=2tz490fdu3e4r(x7wdn6o-04)a4s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    '.herokuapp.com',
-    'myshort.codes'
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -81,15 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'myshortcodes',
-        'USER': 'name',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'POST': ''
+        'USER': 'postgres',
+        'PASSWORD': 'password321',
     }
 }
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -127,8 +119,5 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 STATIC_URL = '/static/'

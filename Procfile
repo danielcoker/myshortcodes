@@ -1,0 +1,1 @@
+web: gunicorn myshortcodes.wsgi --log-file -
