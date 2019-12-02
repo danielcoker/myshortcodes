@@ -1,0 +1,11 @@
+{% extends 'urlshortener/base.html' %}
+
+{% block content %}
+
+<section class="col-md-8 offset-md-2 result-section">
+<h3 class="text-danger text-center">Invalid URL</h3>
+<p><strong>
+    Create your short link <a href="{% url 'urlshortener:index' %}">here</a>
+</strong></p>
+</section>
+{% endblock content %}
