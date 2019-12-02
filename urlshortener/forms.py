@@ -8,6 +8,7 @@ class UrlForm(forms.ModelForm):
             'class': 'form-control input-url',
             'placeholder': 'Enter long URL'
         }),
+        label='',
     )
 
     class Meta:
