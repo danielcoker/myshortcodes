@@ -9,7 +9,7 @@ isort==4.3.21
 lazy-object-proxy==1.4.3
 lxml==4.4.1
 Markdown==3.1.1
-markdown2==2.3.8
+markdown2==2.4.0
 mccabe==0.6.1
 psycopg2==2.8.4
 pyquery==1.4.1
